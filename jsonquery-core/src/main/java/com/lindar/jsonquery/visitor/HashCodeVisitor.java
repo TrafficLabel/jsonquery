@@ -1,6 +1,14 @@
 package com.lindar.jsonquery.visitor;
 
-import com.lindar.jsonquery.ast.*;
+import com.lindar.jsonquery.ast.Node;
+import com.lindar.jsonquery.ast.group.LogicalNode;
+import com.lindar.jsonquery.ast.relationship.RelatedRelationshipNode;
+import com.lindar.jsonquery.ast.BaseNode;
+import com.lindar.jsonquery.ast.relationship.aggregate.BigDecimalComparisonAggregateNode;
+import com.lindar.jsonquery.ast.relationship.aggregate.EnumComparisonAggregateNode;
+import com.lindar.jsonquery.ast.relationship.aggregate.LogicalAggregateNode;
+import com.lindar.jsonquery.ast.relationship.aggregate.StringComparisonAggregateNode;
+import com.lindar.jsonquery.ast.rule.*;
 
 /**
  * Created by Steven on 29/09/2016.
@@ -14,10 +22,10 @@ public class HashCodeVisitor implements JsonQueryVisitor<Integer, Void> {
     public Integer visit(BaseNode node) {
         return node.getReference().hashCode();
     }
+
     public Integer visit(Node node) {
         return node.hashCode();
     }
-
 
     @Override
     public Integer visit(StringComparisonNode node, Void context) {

@@ -1,6 +1,10 @@
 package com.lindar.jsonquery.querydsl;
 
-import com.lindar.jsonquery.ast.*;
+import com.lindar.jsonquery.ast.group.LogicalNode;
+import com.lindar.jsonquery.ast.relationship.aggregate.*;
+import com.lindar.jsonquery.ast.rule.*;
+import com.lindar.jsonquery.visitor.JsonQueryAggregateVisitor;
+import com.lindar.jsonquery.visitor.JsonQueryVisitor;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.ExpressionUtils;
 import com.querydsl.core.types.Ops;

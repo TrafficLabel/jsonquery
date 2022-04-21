@@ -1,6 +1,6 @@
 package com.lindar.jsonquery.querydsl;
 
-import com.lindar.jsonquery.ast.BaseDateComparisonNode;
+import com.lindar.jsonquery.ast.rule.BaseDateComparisonNode;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.DateExpression;
 

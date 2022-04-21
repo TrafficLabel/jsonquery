@@ -2,7 +2,10 @@ package com.lindar.jsonquery.querydsl.sql;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.lindar.jsonquery.ast.*;
+import com.lindar.jsonquery.ast.Node;
+import com.lindar.jsonquery.ast.group.LogicalNode;
+import com.lindar.jsonquery.ast.relationship.aggregate.*;
+import com.lindar.jsonquery.ast.rule.*;
 import com.lindar.jsonquery.querydsl.sql.domain.Brand;
 import com.lindar.jsonquery.querydsl.sql.domain.Player;
 import com.lindar.jsonquery.querydsl.sql.domain.PlayerAttrition;

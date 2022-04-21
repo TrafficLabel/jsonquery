@@ -1,7 +1,7 @@
 package com.lindar.jsonquery.querydsl;
 
-import com.lindar.jsonquery.ast.BaseDateComparisonNode;
-import com.lindar.jsonquery.ast.DateInstantComparisonNode;
+import com.lindar.jsonquery.ast.rule.BaseDateComparisonNode;
+import com.lindar.jsonquery.ast.rule.DateInstantComparisonNode;
 import com.querydsl.core.types.ExpressionUtils;
 import com.querydsl.core.types.Ops;
 import com.querydsl.core.types.Predicate;
@@ -89,8 +89,7 @@ public class QuerydslInstantCalculator extends BaseQuerydslDateCalculator<Instan
     }
 
     @Override
-    protected Predicate fromAbsolute(DateInstantComparisonNode
-                                             dateComparisonNode, DateExpression<Instant> dateExpression) {
+    protected Predicate fromAbsolute(DateInstantComparisonNode dateComparisonNode, DateExpression<Instant> dateExpression) {
         Instant startDate = dateComparisonNode.getDateValue().get(0);
         Instant endDate = Instant.now();
         if (dateComparisonNode.getDateValue().size() > 1) {

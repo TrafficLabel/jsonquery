@@ -2,7 +2,10 @@ package com.lindar.jsonquery.querydsl.jpa;
 
 import com.google.common.collect.Lists;
 import com.lindar.jsonquery.JsonQuery;
-import com.lindar.jsonquery.ast.*;
+import com.lindar.jsonquery.ast.Node;
+import com.lindar.jsonquery.ast.group.LogicalNode;
+import com.lindar.jsonquery.ast.relationship.RelatedRelationshipNode;
+import com.lindar.jsonquery.ast.rule.*;
 import com.lindar.jsonquery.querydsl.jpa.domain.Player;
 import com.lindar.jsonquery.querydsl.jpa.domain.PlayerAttrition;
 import com.querydsl.core.BooleanBuilder;
@@ -56,7 +59,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         ArrayList<String> values = new ArrayList<>();
         values.add("ORGANIC");
         enumNode.setValue(values);
-
 
         BigDecimalComparisonNode decimalNode = new BigDecimalComparisonNode();
         decimalNode.setField("deposits");
@@ -405,7 +407,7 @@ public class TestQuerydslJpaJsonQueryVisitor {
         nodeRelated.setValue(Lists.newArrayList("something"));
 
 
-        LogicalNode logicalNodeAnd = new LogicalNode(LogicalNode.LogicalOperation.AND);
+        LogicalNode logicalNodeAnd = new LogicalNode();
         logicalNodeAnd.setItems(Lists.newArrayList(node3, node4));
 
         LogicalNode logicalNodeOr = new LogicalNode(LogicalNode.LogicalOperation.OR);

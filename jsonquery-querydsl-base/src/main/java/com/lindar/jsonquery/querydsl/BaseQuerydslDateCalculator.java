@@ -1,12 +1,11 @@
 package com.lindar.jsonquery.querydsl;
 
-import com.lindar.jsonquery.ast.BaseDateComparisonNode;
+import com.lindar.jsonquery.ast.rule.BaseDateComparisonNode;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.DateExpression;
 
 public abstract class BaseQuerydslDateCalculator<T extends Comparable<? super T>, N extends BaseDateComparisonNode<T>> implements QuerydslDateCalculator<T, N> {
-
 
     @Override
     public Predicate toPredicate(N node, DateExpression<T> dateExpression) {

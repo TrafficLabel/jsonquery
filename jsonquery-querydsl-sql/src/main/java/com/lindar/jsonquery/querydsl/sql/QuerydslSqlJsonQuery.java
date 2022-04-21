@@ -2,7 +2,7 @@ package com.lindar.jsonquery.querydsl.sql;
 
 import com.lindar.jsonquery.JsonQuery;
 import com.lindar.jsonquery.ast.Node;
-import com.lindar.jsonquery.ast.RelationshipNode;
+import com.lindar.jsonquery.ast.relationship.RelationshipNode;
 import com.lindar.jsonquery.querydsl.QuerydslQueryable;
 import com.mysema.commons.lang.Assert;
 import com.querydsl.core.BooleanBuilder;

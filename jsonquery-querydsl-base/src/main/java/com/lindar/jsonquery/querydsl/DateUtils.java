@@ -1,6 +1,6 @@
 package com.lindar.jsonquery.querydsl;
 
-import com.lindar.jsonquery.ast.BaseDateComparisonNode;
+import com.lindar.jsonquery.ast.rule.BaseDateComparisonNode;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -13,8 +13,9 @@ import java.util.stream.Collectors;
 public class DateUtils {
 
     public static <T extends Comparable<? super T>> List<LocalDate> fromRelativeDateDays(BaseDateComparisonNode<? super T> dateComparisonNode) {
-        if (dateComparisonNode.getRelativeDays() == null) return new ArrayList<>();
-
+        if (dateComparisonNode.getRelativeDays() == null) {
+            return new ArrayList<>();
+        }
         return dateComparisonNode.getRelativeDays().getDaysOfWeek().stream()
                 .map(dayOfWeek -> LocalDate.now().minusWeeks(dateComparisonNode.getRelativeValue()).with(dayOfWeek))
                 .collect(Collectors.toList());
