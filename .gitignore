@@ -55,7 +55,6 @@ fabric.properties
 # .idea/misc.xml 
 # *.ipr
 
-
 ### Maven ###
 target/
 pom.xml.tag
@@ -66,7 +65,6 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-
 
 ### Java ###
 *.class

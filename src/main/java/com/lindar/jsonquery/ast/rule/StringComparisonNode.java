@@ -3,9 +3,6 @@ package com.lindar.jsonquery.ast.rule;
 import com.lindar.jsonquery.visitor.JsonQueryVisitor;
 import lombok.EqualsAndHashCode;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 @EqualsAndHashCode(callSuper = true)
 public class StringComparisonNode extends BasicComparisonNode<String, StringComparisonOperation> {
 

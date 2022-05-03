@@ -12,16 +12,12 @@ import com.querydsl.core.types.dsl.PathBuilder;
 import com.querydsl.jpa.impl.JPAQuery;
 import lombok.experimental.UtilityClass;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 @UtilityClass
 public class QuerydslJpaJsonQuery {
 
     public static void applyPredicateAsSubquery(EntityPathBase joinEntity, BooleanBuilder applyTo, PathBuilder entity, JsonQuery jsonQuery){
         applyTo.and(toPredicateAsSubquery(joinEntity, entity, jsonQuery));
     }
-
 
     public static void applyPredicateAsSubquery(BooleanBuilder applyTo, PathBuilder entity, JsonQuery jsonQuery){
         applyTo.and(toPredicateAsSubquery(entity, jsonQuery));
@@ -30,7 +26,6 @@ public class QuerydslJpaJsonQuery {
     public static Predicate toPredicateAsSubquery(PathBuilder entity, JsonQuery jsonQuery){
         return toPredicateAsSubquery(entity, entity, jsonQuery);
     }
-
 
     public static Predicate toPredicateAsSubquery(EntityPathBase joinEntity, PathBuilder entity, JsonQuery jsonQuery){
         JPAQuery subquery = new JPAQuery();
@@ -42,7 +37,6 @@ public class QuerydslJpaJsonQuery {
         subquery.where(predicate);
         return joinEntity.in(subquery);
     }
-
 
     public static Predicate toPredicateAsSubquery(EntityPathBase joinEntity, PathBuilder entity, QuerydslQueryable queryable){
         JPAQuery subquery = new JPAQuery();

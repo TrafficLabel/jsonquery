@@ -23,9 +23,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 public abstract class QuerydslJsonQueryVisitor implements JsonQueryVisitor<Predicate, PathBuilder>, JsonQueryAggregateVisitor<Predicate, PathBuilder> {
 
     private final static QuerydslLocalDateCalculator LOCAL_DATE_CALCULATOR = new QuerydslLocalDateCalculator();

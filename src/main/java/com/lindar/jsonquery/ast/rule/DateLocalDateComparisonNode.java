@@ -6,9 +6,6 @@ import lombok.EqualsAndHashCode;
 
 import java.time.LocalDate;
 
-/**
- * Created by stevenhills on 26/09/2016.
- */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class DateLocalDateComparisonNode extends BaseDateComparisonNode<LocalDate> {

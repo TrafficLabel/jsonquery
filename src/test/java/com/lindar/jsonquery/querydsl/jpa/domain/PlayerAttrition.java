@@ -6,9 +6,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * Created by stevenhills on 25/09/2016.
- */
 @Entity
 @Data
 public class PlayerAttrition {

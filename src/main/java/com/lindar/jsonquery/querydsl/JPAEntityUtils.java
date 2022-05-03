@@ -16,9 +16,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Steven on 05/10/2016.
- */
 @UtilityClass
 @Slf4j
 public class JPAEntityUtils {
@@ -83,7 +80,6 @@ public class JPAEntityUtils {
 
         return getTableNameFromEntity(clazz);
     }
-
 
     public static Class<?> getFieldClassFromProperty(Class<?> entityClass, String property){
         while(!entityClass.equals(Object.class)) {

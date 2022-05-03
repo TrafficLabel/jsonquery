@@ -6,9 +6,6 @@ import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 
-/**
- * Created by stevenhills on 25/09/2016.
- */
 @EqualsAndHashCode(callSuper = true)
 public class BigDecimalComparisonAggregateNode extends NumberComparisonAggregateNode<BigDecimal> {
 

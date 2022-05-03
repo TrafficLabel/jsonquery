@@ -2,9 +2,6 @@ package com.lindar.jsonquery.ast.relationship.aggregate;
 
 import com.lindar.jsonquery.ast.rule.ComparisonOperation;
 
-/**
- * Created by stevenhills on 26/09/2016.
- */
 public enum AggregateComparisonOperation implements ComparisonOperation {
     EQUALS(1),
     GREATER_THAN(1),

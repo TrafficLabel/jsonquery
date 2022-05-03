@@ -15,9 +15,6 @@ import org.junit.runners.JUnit4;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 @RunWith(value = JUnit4.class)
 public class TestJsonQuery {
 

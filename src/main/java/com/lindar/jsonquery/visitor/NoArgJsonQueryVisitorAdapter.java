@@ -3,9 +3,6 @@ package com.lindar.jsonquery.visitor;
 import com.lindar.jsonquery.ast.group.LogicalNode;
 import com.lindar.jsonquery.ast.rule.StringComparisonNode;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 public abstract class NoArgJsonQueryVisitorAdapter<R> implements JsonQueryVisitor<R, Void> {
 
     public abstract R visit(LogicalNode logicalNode);

@@ -25,7 +25,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-
 public class TestQuerydslJpaJsonQueryVisitor {
     private QuerydslJpaJsonQueryVisitor visitor;
     private PathBuilder<Player> playerEntity;
@@ -127,7 +126,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         enumNode.setRelativePeriod(BaseDateComparisonNode.RelativePeriod.HOUR);
         enumNode.setWithTime(true);
 
-
         JsonQuery holder = new JsonQuery();
         holder.getConditions().getItems().add(enumNode);
 
@@ -141,7 +139,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         assertToString("(select player from Player player where player in (select player from Player player where player.lastLoginDate >= ?1))", query2);
     }
 
-
     @Test
     public void testGeneratedQueryWithJoin() {
 
@@ -151,7 +148,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         ArrayList<String> values = new ArrayList<>();
         values.add("dragonfish");
         stringNode.setValue(values);
-
 
         BigDecimalComparisonNode decimalNode = new BigDecimalComparisonNode();
         decimalNode.setField("deposits");
@@ -207,7 +203,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         values.add(1L);
         stringNode.setValue(values);
 
-
         BigDecimalComparisonNode decimalNode = new BigDecimalComparisonNode();
         decimalNode.setField("deposits");
         decimalNode.setOperation(NumberComparisonOperation.EQUALS);
@@ -251,11 +246,9 @@ public class TestQuerydslJpaJsonQueryVisitor {
         valuesAffiliate.add(1L);
         lookupAffiliate.setValue(valuesAffiliate);
 
-
         JsonQuery holder = new JsonQuery();
         holder.getConditions().getItems().add(lookupComparisonNode);
         holder.getConditions().getItems().add(lookupAffiliate);
-
 
         //query.fetch();
 
@@ -272,7 +265,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
     public void testVisitStringComparisonNode() {
         List<String> value = Lists.newArrayList("test");
         List<String> values = Lists.newArrayList("test", "another test");
-
 
         assertToString("player.promocode = ?1",
                 createStringComparisonNodePredicate("promocode",
@@ -371,7 +363,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
                         value, true));
     }
 
-
     @Test
     public void testVisitLogicalNode() {
         List<BigDecimal> value = Lists.newArrayList(BigDecimal.ZERO);
@@ -406,7 +397,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         nodeRelated.setOperation(StringComparisonOperation.CONTAINS);
         nodeRelated.setValue(Lists.newArrayList("something"));
 
-
         LogicalNode logicalNodeAnd = new LogicalNode();
         logicalNodeAnd.setItems(Lists.newArrayList(node3, node4));
 
@@ -436,7 +426,6 @@ public class TestQuerydslJpaJsonQueryVisitor {
         assertToString("player.deposits < ?1 or (player.deposits <= ?1 or player.deposits >= ?1)",
                 createLogicalNodePredicate(LogicalNode.LogicalOperation.OR, Lists.newArrayList(node1, logicalNodeOr))
         );
-
 
         assertToString("brand.type like ?1 escape '!'",
                 createLogicalNodePredicate(LogicalNode.LogicalOperation.AND, Lists.newArrayList(nodeRelated))

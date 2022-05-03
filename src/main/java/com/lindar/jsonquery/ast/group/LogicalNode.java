@@ -10,9 +10,6 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)

@@ -8,9 +8,6 @@ import java.time.Instant;
 import java.util.List;
 import java.util.Set;
 
-/**
- * Created by stevenhills on 25/09/2016.
- */
 @Entity
 @Data
 public class Player {

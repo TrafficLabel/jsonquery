@@ -10,7 +10,6 @@ import java.sql.Types;
 
 import static com.querydsl.core.types.PathMetadataFactory.forVariable;
 
-
 /**
  * SPlayer is a Querydsl query type for SPlayer
  */
@@ -172,7 +171,6 @@ public class SPlayer extends com.querydsl.sql.RelationalPathBase<SPlayer> {
     public final com.querydsl.sql.ForeignKey<SBrand> fK6tx3suvslb18ek5a7oioakloy = createForeignKey(brandId, "id");
 
     public final com.querydsl.sql.ForeignKey<SPlayerAttrition> _fKfp16sfcuohhohnt3mjfcq1ngo = createInvForeignKey(id, "player_id");
-
 
     public SPlayer(String variable) {
         super(SPlayer.class, forVariable(variable), "null", "player");

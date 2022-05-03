@@ -11,9 +11,6 @@ import com.lindar.jsonquery.ast.relationship.aggregate.LogicalAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.StringComparisonAggregateNode;
 import com.lindar.jsonquery.ast.rule.*;
 
-/**
- * Created by Steven on 29/09/2016.
- */
 public class HashCodeVisitor implements JsonQueryVisitor<Integer, Void> {
 
     public static final HashCodeVisitor DEFAULT = new HashCodeVisitor();

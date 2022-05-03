@@ -13,9 +13,6 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import java.util.regex.Pattern;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 public class QuerydslSqlJsonQueryVisitor extends QuerydslJsonQueryVisitor {
 
     protected static final Pattern DOT = Pattern.compile("\\.");
@@ -46,7 +43,6 @@ public class QuerydslSqlJsonQueryVisitor extends QuerydslJsonQueryVisitor {
 
         Predicate conditionsPredicate = visit(node.getConditions(), subqueryEntity);
         Predicate havingPredicate = visit(node.getAggregations(), subqueryEntity);
-
 
         if(Util.isPredicateEmpty(conditionsPredicate) && Util.isPredicateEmpty(havingPredicate)){
             return new BooleanBuilder();
@@ -93,7 +89,6 @@ public class QuerydslSqlJsonQueryVisitor extends QuerydslJsonQueryVisitor {
 
         return predicate;
     }
-
 
     protected ImmutablePair<String, PathBuilder> processPath(String field, PathBuilder entity){
         QuerydslSqlSpec.Key specKey = QuerydslSqlSpec.Key.builder()

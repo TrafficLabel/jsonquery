@@ -9,9 +9,6 @@ import com.lindar.jsonquery.ast.relationship.aggregate.LogicalAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.StringComparisonAggregateNode;
 import com.lindar.jsonquery.ast.rule.*;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 public interface JsonQueryVisitor<R, C>  {
     R visit(StringComparisonNode stringComparisonNode, C context);
     R visit(LogicalNode logicalNode, C context);

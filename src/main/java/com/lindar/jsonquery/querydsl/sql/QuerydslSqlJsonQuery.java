@@ -11,12 +11,8 @@ import com.querydsl.core.types.dsl.PathBuilder;
 import com.querydsl.sql.SQLQuery;
 import lombok.experimental.UtilityClass;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 @UtilityClass
 public class QuerydslSqlJsonQuery {
-
 
     public static void applyPredicateAsSubquery(PathBuilder joinEntity, BooleanBuilder applyTo, PathBuilder entity, JsonQuery jsonQuery, QuerydslSqlSpec querydslSqlSpec){
         applyTo.and(toPredicateAsSubquery(joinEntity, entity, jsonQuery, querydslSqlSpec));

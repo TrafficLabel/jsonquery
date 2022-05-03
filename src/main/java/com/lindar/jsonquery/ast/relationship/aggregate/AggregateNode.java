@@ -6,9 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import com.lindar.jsonquery.ast.NodeTypeResolver;
 import com.lindar.jsonquery.visitor.JsonQueryAggregateVisitor;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 @JsonTypeInfo(use = JsonTypeInfo.Id.CUSTOM, property = "type")
 @JsonTypeIdResolver(NodeTypeResolver.class)
 @JsonIgnoreProperties(ignoreUnknown = true)

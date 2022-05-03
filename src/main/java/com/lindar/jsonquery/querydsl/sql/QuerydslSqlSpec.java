@@ -9,9 +9,6 @@ import lombok.Data;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Steven on 06/10/2016.
- */
 @Data
 public class QuerydslSqlSpec {
 

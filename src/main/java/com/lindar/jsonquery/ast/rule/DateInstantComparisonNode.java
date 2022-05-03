@@ -6,9 +6,6 @@ import lombok.EqualsAndHashCode;
 
 import java.time.Instant;
 
-/**
- * Created by stevenhills on 26/09/2016.
- */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class DateInstantComparisonNode extends BaseDateComparisonNode<Instant> {

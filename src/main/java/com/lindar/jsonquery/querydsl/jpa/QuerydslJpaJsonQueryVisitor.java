@@ -29,9 +29,6 @@ import java.util.Stack;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-/**
- * Created by stevenhills on 24/09/2016.
- */
 public class QuerydslJpaJsonQueryVisitor extends QuerydslJsonQueryVisitor {
 
     protected static final Pattern DOT = Pattern.compile("\\.");
@@ -165,7 +162,6 @@ public class QuerydslJpaJsonQueryVisitor extends QuerydslJsonQueryVisitor {
 
         PathBuilder subqueryKey = subqueryEntity.get(foreignKey);//.get(primaryKey);
 
-
         subquery.from(subqueryEntity);
 
         queryStack.push(this.query);
@@ -179,7 +175,6 @@ public class QuerydslJpaJsonQueryVisitor extends QuerydslJsonQueryVisitor {
             return new BooleanBuilder();
         }
 
-
         subquery.where(ExpressionUtils.allOf(conditionsPredicate, context.eq(subqueryKey)))
                 .groupBy(subqueryKey)
                 .having(havingPredicate);
@@ -190,7 +185,6 @@ public class QuerydslJpaJsonQueryVisitor extends QuerydslJsonQueryVisitor {
             return subquery.exists();
         }
     }
-
 
     @Override
     protected ImmutablePair<String, PathBuilder> processPath(String field, PathBuilder entity) {

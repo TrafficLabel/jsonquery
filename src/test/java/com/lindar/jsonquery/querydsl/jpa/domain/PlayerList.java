@@ -6,9 +6,6 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created by Steven on 29/09/2016.
- */
 @Entity
 @Table(name = "player_list")
 @Data

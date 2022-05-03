@@ -2,9 +2,6 @@ package com.lindar.jsonquery.querydsl.jpa.domain;
 
 import javax.persistence.AttributeConverter;
 
-/**
- * Created by Steven on 17/02/2017.
- */
 public class AffiliateTypeConverter implements AttributeConverter<AffiliateType, String> {
     @Override
     public String convertToDatabaseColumn(AffiliateType affiliateType) {

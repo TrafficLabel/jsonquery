@@ -2,9 +2,6 @@ package com.lindar.jsonquery.querydsl.jpa;
 
 import com.querydsl.core.types.*;
 
-/**
- * Created by Steven on 29/09/2016.
- */
 public class PredicateCheckerVisitor implements Visitor<Boolean, Void> {
 
     private static final PredicateCheckerVisitor INSTANCE = new PredicateCheckerVisitor();

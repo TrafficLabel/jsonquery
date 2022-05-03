@@ -6,9 +6,6 @@ import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * Created by Steven on 17/02/2017.
- */
 @EqualsAndHashCode(of="type")
 public class AffiliateType implements Serializable {
 

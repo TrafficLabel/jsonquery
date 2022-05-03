@@ -11,9 +11,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by stevenhills on 26/09/2016.
- */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class DateComparisonNode extends ComparisonNode {

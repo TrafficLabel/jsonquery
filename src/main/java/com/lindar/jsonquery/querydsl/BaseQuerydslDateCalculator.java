@@ -11,7 +11,6 @@ public abstract class BaseQuerydslDateCalculator<T extends Comparable<? super T>
     public Predicate toPredicate(N node, DateExpression<T> dateExpression) {
         if (!node.isEnabled()) return new BooleanBuilder();
 
-
         Predicate predicate = new BooleanBuilder();
         switch (node.getOperation()) {
 
@@ -32,7 +31,6 @@ public abstract class BaseQuerydslDateCalculator<T extends Comparable<? super T>
 
         return predicate;
     }
-
 
     protected abstract Predicate fromRelative(N dateComparisonNode, DateExpression<T> dateExpression);
 

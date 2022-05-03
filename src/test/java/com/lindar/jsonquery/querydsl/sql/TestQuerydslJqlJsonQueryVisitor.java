@@ -33,9 +33,6 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by stevenhills on 25/09/2016.
- */
 @RunWith(JUnit4.class)
 public class TestQuerydslJqlJsonQueryVisitor {
 
@@ -152,7 +149,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
         sqlQuery.from(playerEntity);
         sqlQuery.select(playerEntity.getString("username"));
 
-
         Predicate visit = visitor.visit(lookupNode, playerEntity);
         Predicate visit2 = visitor.visit(stringNode, playerEntity);
         subQuery.where(new BooleanBuilder().and(visit).and(visit2));
@@ -171,7 +167,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
     public void testVisitBigDecimalComparisonAggregateNode() {
         List<BigDecimal> value = Lists.newArrayList(BigDecimal.ZERO);
         List<BigDecimal> values = Lists.newArrayList(BigDecimal.ZERO, BigDecimal.TEN);
-
 
         assertToString("count(player.deposits) > 0",
             createBigDecimalComparisonAggregateNodePredicate("deposits",
@@ -209,7 +204,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
                 AggregateComparisonOperation.GREATER_THAN,
                 value));
 
-
         assertToString("sum(player.deposits) = 0",
             createBigDecimalComparisonAggregateNodePredicate("deposits",
                 NumberComparisonAggregateNode.NumberAggregateOperation.SUM,
@@ -240,7 +234,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
                 AggregateComparisonOperation.BETWEEN,
                 values));
 
-
         assertToString("!(sum(player.deposits) = 0)",
             createBigDecimalComparisonAggregateNodePredicate("deposits",
                 NumberComparisonAggregateNode.NumberAggregateOperation.SUM,
@@ -253,7 +246,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
     public void testVisitStringComparisonAggregateNode() {
         List<Integer> value = Lists.newArrayList(0);
         List<Integer> values = Lists.newArrayList(0, 10);
-
 
         assertToString("count(player.promocode) > 0",
             createStringComparisonAggregateNodePredicate("promocode",
@@ -305,12 +297,10 @@ public class TestQuerydslJqlJsonQueryVisitor {
 
     }
 
-
     @Test
     public void testVisitStringComparisonNode() {
         List<String> value = Lists.newArrayList("test");
         List<String> values = Lists.newArrayList("test", "another test");
-
 
         assertToString("player.promocode = test",
             createStringComparisonNodePredicate("promocode",
@@ -444,7 +434,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
         nodeRelated.setOperation(StringComparisonOperation.CONTAINS);
         nodeRelated.setValue(Lists.newArrayList("something"));
 
-
         LogicalNode logicalNodeAnd = new LogicalNode(LogicalNode.LogicalOperation.AND);
         logicalNodeAnd.setItems(Lists.newArrayList(node3, node4));
 
@@ -514,7 +503,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
         node4.setOperation(AggregateComparisonOperation.GREATER_THAN_OR_EQUAL);
         node4.setValue(value);
 
-
         LogicalAggregateNode logicalNodeAnd = new LogicalAggregateNode(LogicalAggregateNode.LogicalAggregateOperation.AND);
         logicalNodeAnd.setItems(Lists.newArrayList(node3, node4));
 
@@ -546,12 +534,10 @@ public class TestQuerydslJqlJsonQueryVisitor {
         );
     }
 
-
     public static class Holder {
         public LogicalNode conditions = new LogicalNode(LogicalNode.LogicalOperation.AND);
         public LogicalRelationshipNode relationships = new LogicalRelationshipNode(LogicalRelationshipNode.LogicalOperation.AND);
     }
-
 
     private Predicate createBigDecimalComparisonAggregateNodePredicate(String field,
                                                                        NumberComparisonAggregateNode.NumberAggregateOperation aggregateOperation,
@@ -602,7 +588,6 @@ public class TestQuerydslJqlJsonQueryVisitor {
 
         return node.accept(visitor, playerEntity);
     }
-
 
     private Predicate createStringComparisonNodePredicate(String field,
                                                           StringComparisonOperation comparisonOperation,

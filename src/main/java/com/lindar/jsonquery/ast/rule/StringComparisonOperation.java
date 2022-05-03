@@ -1,8 +1,5 @@
 package com.lindar.jsonquery.ast.rule;
 
-/**
- * Created by stevenhills on 26/09/2016.
- */
 public enum StringComparisonOperation implements ComparisonOperation {
     EQUALS(1),
     CONTAINS(1),
