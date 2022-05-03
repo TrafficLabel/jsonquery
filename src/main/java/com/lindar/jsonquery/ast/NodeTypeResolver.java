@@ -11,7 +11,6 @@ import com.lindar.jsonquery.ast.relationship.aggregate.BigDecimalComparisonAggre
 import com.lindar.jsonquery.ast.relationship.aggregate.EnumComparisonAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.LogicalAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.StringComparisonAggregateNode;
-import com.lindar.jsonquery.ast.rule.*;
 
 public class NodeTypeResolver implements TypeIdResolver {
 

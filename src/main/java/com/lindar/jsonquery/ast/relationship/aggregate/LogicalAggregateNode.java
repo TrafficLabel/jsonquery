@@ -8,7 +8,6 @@ import com.lindar.jsonquery.visitor.JsonQueryAggregateVisitor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;

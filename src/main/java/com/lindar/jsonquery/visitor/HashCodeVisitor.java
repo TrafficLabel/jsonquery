@@ -1,10 +1,10 @@
 package com.lindar.jsonquery.visitor;
 
+import com.lindar.jsonquery.ast.BaseNode;
 import com.lindar.jsonquery.ast.Node;
 import com.lindar.jsonquery.ast.custom.CustomNode;
 import com.lindar.jsonquery.ast.group.LogicalNode;
 import com.lindar.jsonquery.ast.relationship.RelatedRelationshipNode;
-import com.lindar.jsonquery.ast.BaseNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.BigDecimalComparisonAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.EnumComparisonAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.LogicalAggregateNode;

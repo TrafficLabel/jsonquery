@@ -1,6 +1,5 @@
 package com.lindar.jsonquery.ast.relationship.aggregate;
 
-import com.lindar.jsonquery.ast.relationship.aggregate.NumberComparisonAggregateNode;
 import com.lindar.jsonquery.visitor.JsonQueryAggregateVisitor;
 import lombok.EqualsAndHashCode;
 

@@ -1,6 +1,5 @@
 package com.lindar.jsonquery.ast.relationship.aggregate;
 
-import com.lindar.jsonquery.ast.relationship.aggregate.BaseAggregateNode;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

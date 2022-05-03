@@ -1,7 +1,5 @@
 package com.lindar.jsonquery.ast.rule;
 
-import com.lindar.jsonquery.ast.rule.ComparisonOperation;
-
 public enum EnumComparisonOperation implements ComparisonOperation {
     EQUALS(1),
     EMPTY(0),

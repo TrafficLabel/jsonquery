@@ -1,9 +1,9 @@
 package com.lindar.jsonquery.visitor;
 
+import com.lindar.jsonquery.ast.relationship.aggregate.BigDecimalComparisonAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.EnumComparisonAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.LogicalAggregateNode;
 import com.lindar.jsonquery.ast.relationship.aggregate.StringComparisonAggregateNode;
-import com.lindar.jsonquery.ast.relationship.aggregate.BigDecimalComparisonAggregateNode;
 
 public interface JsonQueryAggregateVisitor<R, C> {
     R visit(StringComparisonAggregateNode stringComparisonAggregateNode, C context);
